@@ -18,7 +18,29 @@ window.addEventListener('load', () => {
     });
 });
 
-
+// Hiển thị form nhập mật khẩu
+function showPasswordPrompt() {
+    Swal.fire({
+        title: 'Nhập mật khẩu',
+        input: 'password',
+        inputPlaceholder: 'Nhập mật khẩu...',
+        showCancelButton: true,
+        confirmButtonText: 'Xác nhận',
+        cancelButtonText: 'Hủy',
+        preConfirm: (password) => {
+            if (password !== '0204') { // Đổi mật khẩu mong muốn tại đây
+                Swal.showValidationMessage('Mật khẩu sai, thử lại!');
+            }
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire('Thành công!', 'Bạn đã nhập đúng mật khẩu!', 'success')
+                .then(() => {
+                    animationTimeline(); // Chạy tiếp nội dung
+                });
+        }
+    });
+}
 // animation timeline
 const animationTimeline = () => {
     // split chars that needs to be animated individually
