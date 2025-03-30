@@ -22,20 +22,20 @@ window.addEventListener('load', () => {
 // Hiển thị form nhập mật khẩu
 function showPasswordPrompt() {
     Swal.fire({
-        title: 'Nhập mật khẩu',
+        title: 'Nhập pass đi người đẹp!',
         input: 'password',
-        inputPlaceholder: 'Nhập mật khẩu...',
+        inputPlaceholder: 'Enter password',
         showCancelButton: true,
         confirmButtonText: 'Xác nhận',
         cancelButtonText: 'Hủy',
         preConfirm: (password) => {
             if (password !== '0204') { // Đổi mật khẩu mong muốn tại đây
-                Swal.showValidationMessage('Mật khẩu sai, thử lại!');
+                Swal.showValidationMessage('Sai mất rùi, nhập lại nha!');
             }
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire('Thành công!', 'Bạn đã nhập đúng mật khẩu!', 'success')
+            Swal.fire('Yehhh!', 'Tiếp nè', 'success')
                 .then(() => {
                     animationTimeline(); // Chạy tiếp nội dung
                 });
