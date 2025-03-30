@@ -11,9 +11,10 @@ window.addEventListener('load', () => {
     }).then((result) => {
         if (result.isConfirmed) {
             document.querySelector('.song').play();
-            animationTimeline();
+            setTimeout(showPasswordPrompt, 1000);
+            
         } else {
-            animationTimeline();
+            showPasswordPrompt(); // Không nghe nhạc thì hiển thị ngay
         }
     });
 });
