@@ -202,18 +202,18 @@ const animationTimeline = () => {
     )
     .staggerTo(
         ".eight svg",
-        0.6, {
+        0.3, {
             visibility: "visible",
             opacity: 0,
             scale: 80,
             repeat: 3,
-            repeatDelay: 1.4,
+            repeatDelay: 0.7,
         },
-        0.3
+        0.2
     )
-    .to(".six", 0.5, {
+    .to(".six", 0.3, {
         opacity: 0,
-        y: 30,
+        y: 20,
         zIndex: "-1",
     })
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
