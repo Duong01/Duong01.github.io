@@ -24,7 +24,7 @@ function showPasswordPrompt() {
     Swal.fire({
         title: 'Nhập pass đi người đẹp!',
         input: 'password',
-        inputPlaceholder: 'Enter password',
+        inputPlaceholder: 'Enter password 4 số',
         showCancelButton: true,
         confirmButtonText: 'Xác nhận',
         cancelButtonText: 'Hủy',
@@ -35,7 +35,7 @@ function showPasswordPrompt() {
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire('Yehhh!', 'Tiếp nè, đúng rùi', 'success')
+            Swal.fire('Yehhh, đúng rùi!', 'Tiếp nè', 'success')
                 .then(() => {
                     animationTimeline(); // Chạy tiếp nội dung
                 });
