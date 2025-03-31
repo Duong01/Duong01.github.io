@@ -35,7 +35,7 @@ function showPasswordPrompt() {
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire('Yehhh!', 'Tiếp nè', 'success')
+            Swal.fire('Yehhh!', 'Tiếp nè, đúng rùi', 'success')
                 .then(() => {
                     animationTimeline(); // Chạy tiếp nội dung
                 });
