@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
 // Hiển thị form nhập mật khẩu
 function showPasswordPrompt() {
     Swal.fire({
-        title: 'Nhập pass đi người đẹp!',
+        title: '<span style="color: #ff69b4;">Nhập pass đi người đẹp!</span>',
         input: 'password',
         inputPlaceholder: 'Enter password 4 số',
         showCancelButton: true,
